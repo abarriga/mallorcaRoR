@@ -1,0 +1,31 @@
+<div id="wrapper">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @meetup.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @meetup.date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @meetup.description %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= get_user(@meetup).name %> <%= get_user(@meetup).surname %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @meetup.place %>
+</p>
+
+
+<%= link_to 'Back', meetups_path %>
+</div>

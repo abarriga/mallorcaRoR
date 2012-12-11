@@ -1,0 +1,23 @@
+<div id="wrapper">
+  <h1><%= t('meetup.h1') %></h1>
+  <% if (logged_in?) %>
+    <p><%= link_to 'Create new Meetup', new_meetup_path %></p>
+  <% end %>
+  <% @meetups.each do |meetup| %>
+    <div>
+      <%= image_tag 'divider.png', :class => "divider" %>
+      <p style="font-size: 15px;"><%= meetup.date %></p>
+      <p><b><%= meetup.title %></p></b>
+      <p><%= meetup.place %></p>
+      <p>Created by <%= get_user(meetup).name %> <%= get_user(meetup).surname %></p>
+      <p>
+        <%= link_to 'All details', meetup %>
+        <% if (logged_in? && current_user.id == meetup.user_id) %>
+          | <%= link_to 'Edit', edit_meetup_path(meetup) %>
+          | <%= link_to 'Destroy', meetup, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>  
+      </p>
+      </br> 
+    </div>
+  <% end %>
+</div>

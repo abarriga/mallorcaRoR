@@ -2,4 +2,133 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  lang: "English"
+  free_culture: "Visit our web code. It's public!"
+  header:
+    menu:
+      home: "Home"
+      meetup: "Meet-ups"
+      blog: "Blog"
+      newuser: "Sign up"
+      login: "Login"
+      logout: "Logout"
+  footer:
+    softlutions: "Hosting powered by Softlutions."
+    softpriv: "All rights reserved under license"
+    license: "CC Recognition 3.0 Unported"
+    copy: "Palma de Mallorca 2012."
+    mail: "info@mallorcaRoR.org"
+  home:
+    title: "MallorcaRoR"
+    description: "MallorcaRoR is a nonprofit group whose goal is to learn, experience and awareness
+     Ruby on Rails at the Balearic Islands in a relaxed and collaborative enviroment."
+    keywords: "majorca ruby on rails develop software developer group applications web"
+    p1: "MallorcaRoR is a nonprofit group whose goal is to learn, experience and awareness
+     Ruby on Rails at the Balearic Islands in a relaxed and collaborative enviroment."
+    p2: "Ruby on Rails is a language / framework designed to develop web applications.
+      It's a modern technology that allows us to save many hours of development, especially
+      the most tedious parts for any developer."
+    meetup:
+      title: "Recent Meet-ups:"
+      all: "All meet-ups."
+    blog:
+      title: "Recent posts:"
+      more: "Read more"
+    users:
+      title: "MallorcaRoR members:"
+  meetup:
+    title: "MallorcaRoR meet-ups"
+    description: "Here you can see all meet-ups we've done and  we'll do in the coming months."
+    keywords: "meetup majorca ruby on rails software developer group software applications web"
+    h1: "All meet-ups"
+  blog:
+    title: "MallorcaRoR Blog"
+    description: "MallorcaRoR - News about technological developments, curiosities, events, Ruby on Rails software and much more."
+    keywords: "software technology news programming Ruby on Rails web mallorca"
+    twitter: "Last tweets"
+    topics: 
+      title: "Find posts by topic"
+      all: "All posts by topic order"
+    date: 
+      title: "Find posts by date"
+      all: "All posts by date order"
+      sec2012: "2nd half of 2012"
+    post:
+      date: "Date:"
+      topic: "Topic:"
+  user:
+    title: "Join to MallorcaRoR"
+    title1: "MallorcaRoR login"
+    title2: "User data"
+    description: "Anyone with a minimum of programming knowledge can assist MallorcaRoR meetups. Sign up now!"
+    keywords: "ruby on rail users group registration mallorcaRoR"
+    join: "Sign up to join de group"
+    ok: "Welcome, you are a MallorcaRoR's member now. Check your email."
+    login: "Login"
+  mails:
+    bye: "Best regards."
+    data: "The data you entered are as follows:"
+    user: 
+      subject: "New MallorcaRoR user"
+      p1: "Welcome to MallorcaRoR group, as a member you can get into the private zone with your E-mail and password."
+      p2: "As a member you can post in our blog, create / propose meetups ..."
+      thanks: "Thank you for working with us we hope to do many things together."
+  error:
+    email: "Not a valid email."
+  helpers:
+    submit:
+      user:
+        create: "Sign up"  
+  activerecord:
+    attributes:
+      user:
+        image_path: "Profile image"
+        name: "Name"
+        surname: "Surname"
+        email: "E-Mail"
+        description: "Description, experience with Ruby on Rails ..."
+        web: "Personal we page"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        password_digest: "Password"
+      meetup:
+        title: "Title"
+        description: "Meet-up description"
+        date: "Realisation Date"
+        place: "Meet-up place, address, contact phone ..."
+    errors:
+      models:
+        blog:
+          attributes:
+            image_path:
+              blank: ": Image path can't be empty."
+            long_desc:
+              blank: ": Post body can't be empty."
+            short_desc:
+              blank: ": Short text can't be empty."
+              too_short: ": Text is too long."
+              too_long: ": Text is too short."
+            title:
+              blank: ": Post title can't be empty."
+            ext_url:
+              blank: ": Url can't be empty."
+            name:
+              blank: ":Post name can't be empty."
+              taken: ": There is already a post with the specified name."
+        user:
+          attributes:
+            image_path:
+              blank: ": Image path can't be empty."
+            email:
+              blank: ": E-Mail cant't be empty."
+              taken: ": There is already a user with the specified E-mail."
+            surname:
+              blank: ": Surname can't be empty."
+            password:
+              blank: ": Password cant be empty."
+            password_confirmation:
+              blank: ": Password confirmation cant be empty."
+            password_digest: 
+              blank: "wrong."
+            name:
+              blank: ": Name can't be empty."

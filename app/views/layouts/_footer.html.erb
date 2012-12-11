@@ -1,0 +1,23 @@
+<footer>
+  <div class="clear"></div>
+  <div class="footer">
+    <div class="softlutions">
+      <%= link_to(image_tag('softlutions.png', :alt => "www.softlutions.es", :title => "www.softlutions.es"), "http://softlutions.es", :target => "_blank") %>
+      <p>
+        <%= t('footer.softlutions') %><br/>
+        <span>
+          <%= t('footer.softpriv') %>&nbsp;<%= link_to t('footer.license'), "http://creativecommons.org/licenses/by/3.0/deed.es_ES", :target => "_blank" %>
+        </span>
+      </p>
+    </div>
+    <div>
+      <%=link_to(image_tag('seal.png', :alt => t('free_culture'), :style => "width:50px;position:absolute;", :title => t('free_culture')), 'https://github.com/abarriga/mallorcaRoR' , :target => '_blank') %>
+    </div>
+    <div class="data">
+      <p>
+        <%= t('footer.copy').html_safe %><br/>
+        <%= link_to t('footer.mail'), "mailto:info@mallorcaror.org" %>
+      </p>
+    </div>
+ </div>
+</footer> 

@@ -1,0 +1,23 @@
+<div id="social_bar_wrapper">
+  <div id="logo_menu_wrapper">
+    <div id="top_menu">
+      <ul class="sf-menu">
+        <li><%= link_to(image_tag('mallorcaror2.png', :style => "width:78px;margin-top: -17px;"), root_path, :class => @home_active ? @home_active : "") %></li>
+        <li><%= link_to t('header.menu.meetup'), meetups_path, :class => @meetup_active ? @meetup_active : "" %></li>
+        <li><%= link_to t('header.menu.blog'), blog_path, :class => @blog_active ? @blog_active : "" %></li>
+        <% unless (logged_in?) %>
+          <li><%= link_to t('header.menu.newuser'), new_user_path, :class => @newuser_active ? @newuser_active : "" %></li>
+          <li><%= link_to t('header.menu.login'), login_path, :class => @login_active ? @login_active : "" %></li>
+        <% else %>
+          <li><%= link_to current_user.name, current_user, :class => @user_active ? @user_active : "" %></li>
+          <li><%= link_to t('header.menu.logout'), logout_path, :data => { :confirm => 'Are you sure?' } %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="languages">
+        <%= link_to 'ES ', :lang => "es" %>|  
+        <%= link_to 'EN ', :lang => "en" %>
+      </div>
+    <div class="clear"></div>
+  </div>
+</div>

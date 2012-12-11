@@ -1,0 +1,10 @@
+<div id="portfolio_wrapper">
+  <%= image_tag 'divider.png', :class => "divider" %>
+  <h2><%= t('home.meetup.title') %></h2>
+  <% @meetups.each do |meetup| %>
+    <p><%= link_to("#{meetup.date} - #{meetup.title}", meetup) %></p>
+  <% end %>
+  <div class="blog_readmore">
+    <%= link_to t('home.meetup.all'), meetups_path  %>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div id="recent_post_wrapper">
+  <%= image_tag 'divider.png', :class => "divider" %>
+  <h2><%= t('home.blog.title') %></h2>
+  <% @posts.each_with_index do |post, index| %>
+  <% if index == 0 %>
+    <div class="one_third_first">
+  <% else %>
+    <div class="one_third">  
+  <% end %>    
+      <div class="featured_image_portfolio2">
+          <% if post.image_path.index("blog/")!=nil %>
+            <%= link_to(image_tag("/#{post.image_path}", :alt => post.title, :title => post.title, :width => "180"), post.ext_url, :target => "_blank", :name => post.name) %>
+          <% elsif post.image_path.index("http")!=nil %>
+            <%= link_to(image_tag(post.image_path, :alt => post.title, :title => post.title, :width => "180"), post.ext_url, :target => "_blank", :name => post.name) %>
+          <% else %>
+            <%= link_to(image_tag("/blog/#{post.image_path}", :alt => post.title, :title => post.title, :width => "180"), post.ext_url, :target => "_blank", :name => post.name) %>
+          <% end %>
+       </div>
+      <div class="featured_content_portfolio">
+        <h5><%= link_to post.title, "http://mallorcaror.org/blog?name="+post.name %></h5>
+        <p><%= post.short_desc %></p>
+        <div class="blog_readmore"><%= link_to t('home.blog.more'), "http://mallorcaror.org/blog?name="+post.name %></div>
+      </div>
+    </div>
+  <% end %>
+</div>

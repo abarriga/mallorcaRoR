@@ -1,0 +1,332 @@
+# Traductions file for Spanish. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  lang: "Español"
+  free_culture: "Visita el código de nuestra web. Es público!"
+  header:
+    menu:
+      home: "Inicio"
+      meetup: "Quedadas"
+      blog: "Blog"
+      newuser: "Registrate"
+      login: "Login"
+      logout: "Logout"
+  footer:
+    softlutions: "Hosting powered by Softlutions."
+    softpriv: "Todos los derechos reservado bajo licencia"
+    license: "CC Reconocimiento 3.0 Unported"
+    copy: "Palma de Mallorca 2012."
+    mail: "info@mallorcaRoR.org"
+  home:
+    title: "MallorcaRoR"
+    description: "MallorcaRoR es un grupo sin ánimo de lucro cuyo objetivo es poder aprender, experimentar y dar a conocer
+    Ruby on Rails en las Islas Baleares en un ambiente distendido y colaborativo."
+    keywords: "mallorca ruby on rails programacion programador grupo software aplicaciones web"
+    p1: "MallorcaRoR es un grupo sin ánimo de lucro cuyo objetivo es poder aprender, experimentar y dar a conocer
+    Ruby on Rails en las Islas Baleares en un ambiente distendido y colaborativo."
+    p2: "Ruby on Rails es un lenguaje/framework orientado a desarrollar aplicaciones web.
+     Es una tecnología moderna que nos permite ahorrarnos muchas horas de desarrollo, sobre todo de
+     las partes más tediosas para cualquier programador."
+    meetup:
+      title: "Últimas quedadas:"
+      all: "Ver todas las quedadas."
+    blog:
+      title: "Últimos posts:"
+      more: "Leer más"
+    users:
+      title: "Miembros de MallorcaRoR:"
+  meetup:
+    title: "Quedadas MallorcaRoR"
+    description: "Aquí puedes ver todas las quedadas que ya hemos hecho y las que vamos a hacer."
+    keywords: "quedadas meetup mallorca ruby on rails programacion programador grupo software aplicaciones web"
+    h1: "Todas las quedadas"
+  blog:
+    title: "Blog de MallorcaRoR"
+    description: "MallorcaRoR - Noticias sobre novedades tecnológicas, curiosidades, eventos, software Ruby on Rails y muchas cosas más."
+    keywords: "noticias tecnologia software Ruby on Rails programacion web mallorca"
+    twitter: "Ultimos tweets"
+    topics: 
+      title: "Buscar posts por categorías"
+      all: "Todos ordenados por categoría"
+    date: 
+      title: "Buscar posts por fechas"
+      all: "Todos ordenados por fecha"
+      sec2012: "2ª mitad de 2012"
+    post:
+      date: "Fecha:"
+      topic: "Categoría:"
+  user:
+    title: "Unete a MallorcaRoR"
+    title1: "MallorcaRoR login"
+    title2: "Datos de usuario"
+    description: "Cualquier persona con un minimo de conocimientos de programación puede asistir a las quedadas de MallorcaRoR. Apuntate ya!!"
+    keywords: "usuarios registro ruby on rail grupo mallorcaRoR"
+    join: "Registrate para unirte al grupo."
+    ok: "Bienvenido, ya eres miembro de MallorcaRoR. Revisa tu correo."
+    login: "Entrar"
+  mails:
+    bye: "Un cordial saludo."
+    data: "Los datos que ha introducido son los siguientes:"
+    user: 
+      subject: "Nuevo usuario MallorcaRoR"
+      p1: "Bienvenido al grupo MallorcaRoR, como miembro puedes entrar en la parte privada con tu E-mail y tu contraseña."
+      p2: "Como miembro puedes publicar posts en el blog, crear/proponer quedadas..."
+      thanks: "Gracias por colaborar con nostros esperamos poder hacer muchas cosas juntos."
+  error:
+    email: "No es un E-mail válido."
+  helpers:
+    submit:
+      user:
+        create: "Registrar"  
+  activerecord:
+    attributes:
+      user:
+        image_path: "Imagen de perfil"
+        name: "Nombre"
+        surname: "Apellidos"
+        email: "E-Mail"
+        description: "Descripción, experiencia con Ruby on Rails..."
+        web: "Página web personal"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de contraseña"
+        password_digest: "Contraseña"
+      meetup:
+        title: "Título"
+        description: "Descripción del evento"
+        date: "Fecha de realización"
+        place: "Lugar de reunión, dirección, teléfono de contacto..."
+    errors:
+      models:
+        blog:
+          attributes:
+            image_path:
+              blank: ": El path de la imagen no puede estar vacio."
+            long_desc:
+              blank: ": El cuerpo del post no puede estar vacio."
+            short_desc:
+              blank: ": El texto corto no puede estar vacio."
+              too_short: ": El texto es demasiado corto."
+              too_long: ": El texto es demasiado largo."
+            title:
+              blank: ": El titulo del post no puede estar vacio."
+            ext_url:
+              blank: ": La url de enlace de la imagen no puede estar vacia."
+            name:
+              blank: ": El nombre del post no puede estar vacio."
+              taken: ": Ya existe un post con el nombre indicado."
+        user:
+          attributes:
+            image_path:
+              blank: ": El path de la imagen no puede estar vacio."
+            email:
+              blank: ": El E-Mail no puede estar vacio."
+              taken: ": Ya existe un usuario con el E-mail indicado."
+            surname:
+              blank: ": El apellido no puede estar vacio."
+            password:
+              blank: ": La contraseña no puede estar vacia."
+            password_confirmation:
+              blank: ": La confirmación de la contraseña no puede estar vacia."
+            password_digest: 
+              blank: "incorrecta."
+            name:
+              blank: ": El nombre no puede estar vacio."
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%A, %d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: cerca de 1 hora
+        other: cerca de %{count} horas
+      about_x_months:
+        one: cerca de 1 mes
+        other: cerca de %{count} meses
+      about_x_years:
+        one: cerca de 1 año
+        other: cerca de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: ! '%{count} días'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mes
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minuto
+      month: Mes
+      second: Segundos
+      year: Año
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide con la confirmación
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser un número par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor o igual que %{count}
+      inclusion: no está incluído en la lista
+      invalid: es inválido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor o igual que %{count}
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser un número non
+      record_invalid: ! 'La validación falló: %{errors}'
+      taken: ya ha sido tomado
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: es demasiado largo (máximo %{count} caracteres)
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: es demasiado corto (mínimo %{count} caracteres)
+      wrong_length:
+        one: longitud errónea (debe ser de 1 caracter)
+        other: longitud errónea (debe ser de %{count} caracteres)
+    template:
+      body: ! 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: ! '%{model} no pudo guardarse debido a 1 error'
+        other: ! '%{model} no pudo guardarse debido a %{count} errores'
+  helpers:
+    select:
+      prompt: Por favor selecciona
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: ! ','
+        format: ! '%u%n'
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: '¤'
+    format:
+      delimiter: ! ','
+      precision: 2
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: mil millones
+          million: millón
+          quadrillion: mil billones
+          thousand: mil
+          trillion: billón
+          unit: ''
+      format:
+        delimiter: ! ','
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ! ','
+    precision:
+      format:
+        delimiter: ! ','
+  support:
+    array:
+      last_word_connector: ! ' y '
+      two_words_connector: ! ' y '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%a, %d de %b de %Y a las %H:%M:%S %Z'
+      long: ! '%A, %d de %B de %Y a las %I:%M %p'
+      short: ! '%d de %b a las %H:%M hrs'
+    pm: pm
+  

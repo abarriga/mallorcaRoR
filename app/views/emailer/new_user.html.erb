@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <%= link_to(image_tag('http://mallorcaror.org/images/mallorcaror.png'), 'http://www.mallorcaror.org') %>
+    <p>
+      <%= t('mails.user.p1') %>
+    </p>
+    <p>
+      <%= t('mails.data') %>
+    </p>
+    <p>
+      <b>Name:</b></br>
+      <%= @user.name %>
+    </p>
+    <p>
+      <b>Surname:</b></br>
+      <%= @user.surname %>
+    </p>
+    <p>
+      <b>E-mail:</b></br>
+      <%= @user.email %>
+    </p>
+    <p>
+      <b>Web:</b></br>
+      <%= @user.web %>
+    </p>
+    <p>
+      <b>Description:</b></br>
+      <%= @user.description %>
+    </p>
+    <p><%= t('mails.user.p2') %></p>
+    <p><%= t('mails.user.thanks') %></p>
+    <p><%= t('mails.bye') %></p>
+  </body>
+</html>

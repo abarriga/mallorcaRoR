@@ -1,0 +1,10 @@
+<div id="wrapper">
+  <%= image_tag 'divider.png', :class => "divider" %>
+  <h2><%= t('home.users.title') %></h2>
+  <ul>  
+    <% @users.each do |user| %>
+      <li><%= image_tag "/users/#{user.image_path}", :style=>'width:50px;', :alt => "#{user.name} #{user.surname}", :title => "#{user.name} #{user.surname}" %></li>
+    <% end %>
+  </ul>
+  <%= image_tag 'divider.png', :class => "divider" %>
+</div>

@@ -1,15 +1,29 @@
+<div id="wrapper">
 <p id="notice"><%= notice %></p>
-
+<p style="text-align: center;">
+  <%= image_tag "/users/#{@user.image_path}", :style=>'width:150px;' %>
+</p>
 <p>
-  <b>Name:</b>
+  <b><%= t('activerecord.attributes.user.name') %>: </b>
   <%= @user.name %>
 </p>
-
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
+  <b><%= t('activerecord.attributes.user.surname') %>: </b>
+  <%= @user.surname %>
+</p>
+<p>
+  <b><%= t('activerecord.attributes.user.email') %>: </b>
+  <%= @user.email %>
+</p>
+<p>
+  <b><%= t('activerecord.attributes.user.description') %>: </b>
+  <%= @user.description %>
+</p>
+<p>
+  <b><%= t('activerecord.attributes.user.web') %>: </b>
+  <%= @user.web %>
 </p>
 
-
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

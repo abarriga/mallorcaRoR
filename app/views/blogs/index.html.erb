@@ -1,0 +1,65 @@
+<div id="wrapper">
+  <%= render 'facebook_send_script' %>
+  <div class="blog-menu">
+    <ul class="sf-menu">
+      <li><%= t('blog.topics.title') %>
+        <ul>
+          <li><%= link_to t('blog.topics.all'), blog_path(:topic => "all") %></li>
+          <% @topics.each do |topic| %>
+            <li><%= link_to topic.name, blog_path(:topic => topic), :title => topic.description %></li>
+          <% end %>
+        </ul>
+      </li>
+      <li><%= t('blog.date.title') %>
+        <ul>
+          <li><%= link_to t('blog.date.all'), blog_path %></li>
+          <li><%= link_to t('blog.date.sec2012'), blog_path(:year => "2012", :half=> "2") %></li>
+        </ul>
+      </li>
+      <% if logged_in? %>
+        <li><%= link_to 'Create new Post', new_blog_path %></li>
+      <% end %>
+    </ul>
+  </div>  
+  <div class="full_width">
+    <% @blogs.each do |blog| %>
+      <div class="post">
+        <h2><%= blog.title %></h2>
+        <div class="post_image">
+          <% if blog.image_path.index("blog/")!=nil %>
+            <%= link_to(image_tag("/#{blog.image_path}", :alt => blog.title, :title => blog.title, :width => "100"), blog.ext_url, :target => "_blank", :name => blog.name) %>
+          <% elsif blog.image_path.index("http")!=nil %>
+            <%= link_to(image_tag(blog.image_path, :alt => blog.title, :title => blog.title, :width => "100"), blog.ext_url, :target => "_blank", :name => blog.name) %>
+          <% else %>
+            <%= link_to(image_tag("/blog/#{blog.image_path}", :alt => blog.title, :title => blog.title, :width => "100"), blog.ext_url, :target => "_blank", :name => blog.name) %>
+          <% end %>
+        </div>
+        <div class="post_details_date_wrapper">
+          <div class="post_date" >
+            <strong><%= t('blog.post.date') %></strong> <%= blog.created_at.strftime("%d/%m/%Y") %></br>
+            Topic: <%= blog.topic.name %></br>
+            Posted by: <%= get_user(blog).name %> <%= get_user(blog).surname %> 
+          </div>
+          <%= render 'share', :name => blog.name %>
+          <% if (logged_in? && blog.user_id == current_user.id) %>
+            <div class="blog-admin">
+              <p><%= link_to 'Edit', edit_blog_path(blog) %></p>
+              <p><%= link_to 'Destroy', delete_blog_path(blog), :data => { :confirm=> 'Are you sure?' } %></p>  
+            </div>  
+          <% end %>
+        </div>
+        <div class="other_post_details_wrapper">
+          <div class="post_content">
+            <div class="intro">
+            </div>
+            <p><%= blog.short_desc %></p>
+            </br>
+            <%= blog.long_desc.html_safe %>
+          </div>
+        </div>
+        <hr />
+      </div>
+    <% end %>
+  </div>
+  <%#= render 'twitter_plugin' %>
+</div>
