@@ -46,9 +46,9 @@ class MeetupsController < ApplicationController
 
     respond_to do |format|
       if @meetup.save
-        format.html { redirect_to @meetup, notice: 'Meetup was successfully created.' }
+        format.html { redirect_to @meetup, :notice => 'Meetup was successfully created.' }
       else
-        format.html { render action: "new" }
+        format.html { render :action => "new" }
       end
     end
   end
@@ -60,9 +60,9 @@ class MeetupsController < ApplicationController
 
     respond_to do |format|
       if @meetup.update_attributes(params[:meetup])
-        format.html { redirect_to @meetup, notice: 'Meetup was successfully updated.' }
+        format.html { redirect_to @meetup, :notice => 'Meetup was successfully updated.' }
       else
-        format.html { render action: "edit" }
+        format.html { render :action => "edit" }
       end
     end
   end

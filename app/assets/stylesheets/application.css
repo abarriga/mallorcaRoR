@@ -921,7 +921,6 @@ h2 {
     font-weight: normal;
     letter-spacing: -1px;
     padding: 10px 0 15px;
-    text-transform:uppercase;
 }
 
 h2 a {
@@ -931,7 +930,6 @@ h2 a {
     font-weight: normal;
     letter-spacing: -1px;
     padding: 10px 0 15px;
-    text-transform:uppercase;
     text-decoration:none;
     -webkit-transition:all 0.3s ease-in;  
     -moz-transition:all 0.3s ease-in;  
@@ -951,7 +949,6 @@ h2 a:hover {
     font-weight: normal;
     letter-spacing: -1px;
     padding: 10px 0 23px;
-    text-transform:uppercase;
 }
 
 .input_transparente{
@@ -3393,7 +3390,6 @@ ul#social li a{
 }
 
 .view h2 {
-    text-transform: uppercase;
     color: #fff;
     text-align: center;
     position: relative;

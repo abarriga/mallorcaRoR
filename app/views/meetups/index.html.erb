@@ -14,7 +14,7 @@
         <%= link_to 'All details', meetup %>
         <% if (logged_in? && current_user.id == meetup.user_id) %>
           | <%= link_to 'Edit', edit_meetup_path(meetup) %>
-          | <%= link_to 'Destroy', meetup, method: :delete, data: { confirm: 'Are you sure?' } %>
+          | <%= link_to 'Destroy', meetup, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
         <% end %>  
       </p>
       </br> 

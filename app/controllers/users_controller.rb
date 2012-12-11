@@ -64,11 +64,11 @@ class UsersController < ApplicationController
       
     respond_to do |format|
       if @user.save
-        Emailer.new_partner(@user, "info@mallorcaror.org").deliver
-        Emailer.new_partner(@user, @user.email).deliver
-        format.html { redirect_to new_user_url, notice: t('user.ok') }
+        Emailer.new_user(@user, "info@mallorcaror.org").deliver
+        Emailer.new_user(@user, @user.email).deliver
+        format.html { redirect_to new_user_url, :notice => t('user.ok') }
        else
-        format.html { render action: "new" }
+        format.html { render :action => "new" }
       end
     end
   end
@@ -86,9 +86,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, :notice => 'User was successfully updated.' }
       else
-        format.html { render action: "edit" }
+        format.html { render :action => "edit" }
       end
     end
   end
