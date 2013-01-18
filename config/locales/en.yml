@@ -12,19 +12,20 @@ en:
       newuser: "Sign up"
       login: "Login"
       logout: "Logout"
+      task: "Tasks"
   footer:
     softlutions: "Hosting powered by Softlutions."
     softpriv: "All rights reserved under license"
     license: "CC Recognition 3.0 Unported"
-    copy: "Palma de Mallorca 2012."
+    copy: "Palma de Mallorca 2012-2013."
     mail: "info@mallorcaRoR.org"
   home:
     title: "MallorcaRoR"
     description: "MallorcaRoR is a nonprofit group whose goal is to learn, experience and awareness
-     Ruby on Rails at the Balearic Islands in a relaxed and collaborative enviroment."
+     Ruby on Rails at the Balearic Islands in a relaxed and collaborative environment."
     keywords: "majorca ruby on rails develop software developer group applications web"
     p1: "MallorcaRoR is a nonprofit group whose goal is to learn, experience and awareness
-     Ruby on Rails at the Balearic Islands in a relaxed and collaborative enviroment."
+     Ruby on Rails at the Balearic Islands in a relaxed and collaborative environment."
     p2: "Ruby on Rails is a language / framework designed to develop web applications.
       It's a modern technology that allows us to save many hours of development, especially
       the most tedious parts for any developer."
@@ -65,6 +66,10 @@ en:
     join: "Sign up to join de group"
     ok: "Welcome, you are a MallorcaRoR's member now. Check your email."
     login: "Login"
+  task:
+    title: "MallorcaRoR's to do tasks"
+    description: "Help us implementing some of our tasks."
+    keywords: "tasks users ruby on rail group mallorcaRoR"
   mails:
     bye: "Best regards."
     data: "The data you entered are as follows:"

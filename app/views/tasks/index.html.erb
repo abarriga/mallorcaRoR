@@ -1,0 +1,25 @@
+<div id="wrapper">
+<h1>Tasks</h1>
+
+<%= link_to 'New Task', new_task_path, :style=>"float:right;" %>
+</br>
+<table style="width: 100%;">
+  <tr>
+    <td><b>Title</b></td>
+    <td><b>Finished</b></td>
+    <td><b>Created by</b></td>
+    <td></td>
+ </tr>
+
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.title %></td>
+    <td><%= task.finished %></td>
+    <td><%= get_user(task).name %> <%= get_user(task).surname %></td>
+    <td><%= link_to 'Show', task %> | <%= link_to 'Edit', edit_task_path(task) %> | <%= link_to 'Destroy', task, :method=> :delete, :data=> { :confirm=> 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+
+</div>

@@ -1,0 +1,34 @@
+<div id="contact_form">
+  <%= form_for(@task) do |f| %>
+    <% if @task.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+        <ul>
+          <% @task.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <ul class="form">
+      <li class="field">
+        <%= f.label :title %><br />
+        <%= f.text_field :title %>
+      </li>
+      <li class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description %>
+      </li>
+      <li class="field" style="width: 100%;">
+        <%= f.label :finished %>
+        <%= f.check_box :finished %>
+      </li>
+     
+      <li class="actions">
+        <%= f.submit %>
+      </li>
+    </ul>
+  <% end %>
+</div>

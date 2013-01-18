@@ -16,4 +16,6 @@ MallorcaRoR::Application.routes.draw do
   match 'delete_blog.:id' => 'blogs#destroy', :as => 'delete_blog'
   
   resources :topics
+  
+  resources :tasks
 end

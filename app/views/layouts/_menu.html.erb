@@ -9,6 +9,7 @@
           <li><%= link_to t('header.menu.newuser'), new_user_path, :class => @newuser_active ? @newuser_active : "" %></li>
           <li><%= link_to t('header.menu.login'), login_path, :class => @login_active ? @login_active : "" %></li>
         <% else %>
+          <li><%= link_to t('header.menu.task'), tasks_path, :class => @task_active ? @task_active : "" %></li>
           <li><%= link_to current_user.name, current_user, :class => @user_active ? @user_active : "" %></li>
           <li><%= link_to t('header.menu.logout'), logout_path, :data => { :confirm => 'Are you sure?' } %></li>
         <% end %>
